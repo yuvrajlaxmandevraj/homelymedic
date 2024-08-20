@@ -1,0 +1,8 @@
+CRITICAL - 2024-03-09 15:24:27 --> Creation of dynamic property IonAuth\Libraries\IonAuth::$session is deprecated
+#0 /home4/homelyme/public_html/vendor/benedmunds/codeigniter-ion-auth/Libraries/IonAuth.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dyn...', '/home4/homelyme...', 65)
+#1 /home4/homelyme/public_html/app/Controllers/BaseController.php(100): IonAuth\Libraries\IonAuth->__construct()
+#2 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(812): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->createController()
+#4 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(328): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home4/homelyme/public_html/index.php(55): CodeIgniter\CodeIgniter->run()
+#6 {main}

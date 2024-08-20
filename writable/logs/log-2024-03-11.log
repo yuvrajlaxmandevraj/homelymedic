@@ -1,0 +1,269 @@
+ERROR - 2024-03-11 16:56:50 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\homelymedic\app\Controllers\Frontend.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\homelymedic\app\Controllers\Frontend.php(17): App\Controllers\get_settings('general_setting...', true)
+#6 C:\xampp\htdocs\homelymedic\app\Controllers\Home.php(12): App\Controllers\Frontend->__construct()
+#7 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(913): App\Controllers\Home->__construct()
+#8 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+#9 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\homelymedic\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\homelymedic\app\Controllers\Frontend.php(25): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\homelymedic\app\Controllers\Frontend.php(17): App\Controllers\get_settings('general_setting...', true)
+#5 C:\xampp\htdocs\homelymedic\app\Controllers\Home.php(12): App\Controllers\Frontend->__construct()
+#6 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(913): App\Controllers\Home->__construct()
+#7 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\homelymedic\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-03-11 16:56:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `variable` = :variable:', [...], false)
+ 3 APPPATH\Controllers\Frontend.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Frontend.php(17): App\Controllers\get_settings('general_settings', true)
+ 5 APPPATH\Controllers\Home.php(12): App\Controllers\Frontend->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Home->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-11 16:56:52 --> ErrorException: Uncaught Error: Call to undefined method CodeIgniter\Debug\ExceptionHandler::cleanPath() in C:\xampp\htdocs\homelymedic\app\Views\errors\html\error_exception.php:33
+Stack trace:
+#0 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Debug\BaseExceptionHandler.php(258): include()
+#1 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#2 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500, 'C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Database\Exceptions\DatabaseException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 8)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\homelymedic\app\Controllers\Frontend.php(25): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\homelymedic\app\Controllers\Frontend.php(17): App\Controllers\get_settings('general_setting...', true)
+#4 C:\xampp\htdocs\homelymedic\app\Controllers\Home.php(12): App\Controllers\Frontend->__construct()
+#5 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(913): App\Controllers\Home->__construct()
+#6 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+#7 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\homelymedic\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in APPPATH\Views\errors\html\error_exception.php on line 33.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-11 11:57:22 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 11:57:22 --> ErrorException: Uncaught ErrorException: Undefined property: Config\App::$allowedHostnames in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php:248
+Stack trace:
+#0 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 248)
+#1 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(237): CodeIgniter\HTTP\SiteURIFactory->getValidHost('localhost')
+#2 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURIFactory->getHost()
+#3 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\HTTP\SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath('/')
+#4 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri(NULL, false)
+#6 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#7 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance('uri', NULL)
+#8 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\Services.php(566): CodeIgniter\Config\BaseService::__callStatic('uri', Array)
+#10 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::incomingrequest(Object(Config\App), false)
+#11 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\Services.php(524): CodeIgniter\Config\BaseService::__callStatic('incomingrequest', Array)
+#12 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request(NULL, false)
+#13 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#14 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\Services.php(520): CodeIgniter\Config\BaseService::getSharedInstance('request', NULL)
+#15 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\BaseService.php(258): CodeIgniter\Config\Services::request()
+#16 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Debug\Exceptions.php(150): CodeIgniter\Config\BaseService::__callStatic('request', Array)
+#17 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#18 {main}
+  thrown
+【Previous Exception】
+Error
+Class "Kint\Renderer\Renderer" not found
+#0 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', Array)
+#1 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', Array)
+#2 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(299): config('Config\\Kint')
+#3 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+#4 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+#5 C:\xampp\htdocs\homelymedic\public\index.php(67): CodeIgniter\CodeIgniter->initialize()
+#6 {main}
+in SYSTEMPATH\HTTP\SiteURIFactory.php on line 248.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-11 16:58:09 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 16:59:18 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 16:59:19 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 16:59:19 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 16:59:19 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 16:59:20 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:10 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:12 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:12 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:13 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:18 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:19 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:20 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:20 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:20 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:21 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:21 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:03:34 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:05:03 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-11 17:06:32 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()

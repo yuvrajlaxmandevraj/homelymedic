@@ -1,0 +1,351 @@
+<?php
+
+namespace App\Controllers\partner;
+
+use App\Models\Promo_code_model;
+
+class Promo_codes extends Partner
+{
+    public $orders;
+    public function __construct()
+    {
+        parent::__construct();
+        $this->promo_codes = new Promo_code_model();
+        $this->validation = \Config\Services::validation();
+    }
+    public function index()
+    {
+        if ($this->isLoggedIn && $this->userIsPartner) {
+            if (!exists(['partner_id' => $this->userId, 'is_approved' => 1], 'partner_details')) {
+                return redirect('partner/profile');
+            }
+            $is_already_subscribe = fetch_details('partner_subscriptions', ['partner_id' => $this->userId, 'status' => 'active']);
+            if (empty($is_already_subscribe)) {
+                return redirect('partner/subscription');
+            }
+
+            $this->data['title'] = 'Promo codes | Partner Panel';
+            $this->data['main_page'] = 'promo_codes';
+            return view('backend/partner/template', $this->data);
+        } else {
+            return redirect('partner/login');
+        }
+    }
+    public function add()
+    {
+
+        if (!$this->isLoggedIn && !$this->userIsPartner) {
+            return redirect('partner/login');
+        } else {
+            $is_already_subscribe = fetch_details('partner_subscriptions', ['partner_id' => $this->userId, 'status' => 'active']);
+            if (empty($is_already_subscribe)) {
+                return redirect('partner/subscription');
+            }
+
+            $this->data['title'] = 'Promo codes | Partner Panel';
+            $this->data['main_page'] = FORMS . 'add_promocode';
+            return view('backend/partner/template', $this->data);
+        }
+    }
+    public function save()
+    {
+
+        if (!$this->isLoggedIn && !$this->userIsPartner) {
+            return redirect('unauthorised');
+        } else {
+            if (defined('ALLOW_MODIFICATION') && ALLOW_MODIFICATION == 0) {
+                $response['error'] = true;
+                $response['message'] = DEMO_MODE_ERROR;
+                $response['csrfName'] = csrf_token();
+                $response['csrfHash'] = csrf_hash();
+                return $this->response->setJSON($response);
+            }
+            $is_already_subscribe = fetch_details('partner_subscriptions', ['partner_id' => $this->userId, 'status' => 'active']);
+            if (empty($is_already_subscribe)) {
+                return redirect('partner/subscription');
+            }
+
+            if (isset($_POST) && !empty($_POST)) {
+                $repeat_usage = isset($_POST['repeat_usage']) ? $_POST['repeat_usage'] : '';
+                $id = isset($_POST['promo_id']) ? $_POST['promo_id'] : '';
+                if ($repeat_usage == 'on' && empty($id) && $id == '') {
+                    $this->validation->setRules(
+                        [
+                            'promo_code' => [
+                                "rules" => 'required',
+                                "errors" => [
+                                    "required" => "Please enter promo code name"
+                                ]
+                            ],
+                            'start_date' => [
+                                "rules" => 'required',
+                                "errors" => [
+                                    "required" => "Please select start date"
+                                ]
+                            ],
+                            'end_date' => [
+                                "rules" => 'required',
+                                "errors" => [
+                                    "required" => "Please select end date"
+                                ]
+                            ],
+                            'no_of_users' => [
+                                "rules" => 'required|numeric|greater_than[0]',
+                                "errors" => [
+                                    "required" => "Please enter number of users",
+                                    "numeric" => "Please enter numeric value for number of users",
+                                    "greater_than" => "number of users must be greater than 0",
+                                ]
+                            ],
+                            'no_of_repeat_usage' => [
+                                "rules" => 'required|numeric|greater_than[0]',
+                                "errors" => [
+                                    "required" => "Please enter number of repeat usage",
+                                    "numeric" => "Please enter numeric value for number of repeat usage",
+                                    "greater_than" => "number of repeat usage must be greater than 0",
+                                ]
+                            ],
+
+                            'minimum_order_amount' => [
+                                "rules" => 'required|numeric|greater_than[0]',
+                                "errors" => [
+                                    "required" => "Please enter minimum order amount",
+                                    "numeric" => "Please enter numeric value for minimum order amount",
+                                    "greater_than" => "minimum order amount must be greater than 0",
+                                ]
+                            ],
+                            'discount' => [
+                                "rules" => 'required|numeric|greater_than[0]',
+                                "errors" => [
+                                    "required" => "Please enter discount",
+                                    "numeric" => "Please enter numeric value for discount",
+                                    "greater_than" => "discount must be greater than 0",
+                                ]
+                            ],
+                            'max_discount_amount' => [
+                                "rules" => 'required|numeric|greater_than[0]',
+                                "errors" => [
+                                    "required" => "Please enter max discount amount",
+                                    "numeric" => "Please enter numeric value for max discount amount",
+                                    "greater_than" => "discount amount must be greater than 0",
+                                ]
+                            ],
+                            // 'image' => [
+                            //     "rules" => 'uploaded[image]|ext_in[image,png,jpg,gif,jpeg,webp]|max_size[image,8496]|is_image[image]'
+                            // ],
+                        ],
+                    );
+                } else {
+                    $this->validation->setRules(
+                        [
+                            'promo_code' => [
+                                "rules" => 'required',
+                                "errors" => [
+                                    "required" => "Please enter promo code name"
+                                ]
+                            ],
+                            'start_date' => [
+                                "rules" => 'required',
+                                "errors" => [
+                                    "required" => "Please select start date"
+                                ]
+                            ],
+                            'end_date' => [
+                                "rules" => 'required',
+                                "errors" => [
+                                    "required" => "Please select end date"
+                                ]
+                            ],
+                            'no_of_users' => [
+                                "rules" => 'required|numeric|greater_than[0]',
+                                "errors" => [
+                                    "required" => "Please enter number of users",
+                                    "numeric" => "Please enter numeric value for number of users",
+                                    "greater_than" => "number of users must be greater than 0",
+                                ]
+                            ],
+
+                            'minimum_order_amount' => [
+                                "rules" => 'required|numeric|greater_than[0]',
+                                "errors" => [
+                                    "required" => "Please enter minimum order amount",
+                                    "numeric" => "Please enter numeric value for minimum order amount",
+                                    "greater_than" => "minimum order amount must be greater than 0",
+                                ]
+                            ],
+                            'discount' => [
+                                "rules" => 'required|numeric|greater_than[0]',
+                                "errors" => [
+                                    "required" => "Please enter discount",
+                                    "numeric" => "Please enter numeric value for discount",
+                                    "greater_than" => "discount must be greater than 0",
+                                ]
+                            ],
+                            'max_discount_amount' => [
+                                "rules" => 'required|numeric|greater_than[0]',
+                                "errors" => [
+                                    "required" => "Please enter max discount amount",
+                                    "numeric" => "Please enter numeric value for max discount amount",
+                                    "greater_than" => "discount amount must be greater than 0",
+                                ]
+                            ],
+                            // 'image' => [
+                            //     "rules" => 'uploaded[image]|ext_in[image,png,jpg,gif,jpeg,webp]|max_size[image,8496]|is_image[image]'
+                            // ],
+                        ],
+                    );
+                }
+                if (!$this->validation->withRequest($this->request)->run()) {
+                    $errors  = $this->validation->getErrors();
+                    $response['error'] = true;
+                    $response['message'] = $errors;
+                    $response['csrfName'] = csrf_token();
+                    $response['csrfHash'] = csrf_hash();
+                    $response['data'] = [];
+                    return $this->response->setJSON($response);
+                } else {
+
+                    if (isset($_POST['promo_id']) && !empty($_POST['promo_id'])) {
+                        $promo_id = $_POST['promo_id'];
+                        $old_image = fetch_details('promo_codes', ['id' => $_POST['promo_id']], ['image'])[0]['image'];
+                    } else {
+                        $promo_id = '';
+                        $old_image = '';
+                    }
+                    $path = './public/uploads/promocodes/';
+                    $image = "";
+                    if (!empty($_FILES['image']) && isset($_FILES['image'])) {
+                        $file =  $this->request->getFile('image');
+                        if ($file->isValid()) {
+                            if ($file->move($path)) {
+                                if (isset($_POST['promo_id']) && !empty($_POST['promo_id'])) {
+                                    if (!empty($old_image)) {
+                                        unlink($old_image);
+                                    }
+                                }
+                                $image = 'public/uploads/promocodes/' . $file->getName();
+                            } else {
+                                $image = $old_image;
+                            }
+                        } else {
+                            $image = $old_image;
+                        }
+                    } else {
+                        $image = $old_image;
+                    }
+                    // print_r($image);
+                    $promocode_model = new Promo_code_model();
+                    $partner_id = $_SESSION['user_id'];
+                    if (isset($_POST['repeat_usage'])) {
+                        $repeat_usage = "1";
+                    } else {
+                        $repeat_usage = "0";
+                    }
+                    if (isset($_POST['status'])) {
+                        $status = "1";
+                    } else {
+                        $status = "0";
+                    }
+                    if (isset($_POST['no_of_users'])) {
+                        $users = $this->request->getVar('no_of_users');
+                    } else {
+                        $users = "1";
+                    }
+
+
+                    $promocode = array(
+                        'id' => $promo_id,
+                        'partner_id' => $partner_id,
+                        'promo_code' => $this->request->getVar('promo_code'),
+                        'message' => $this->request->getVar('message'),
+                        'start_date' => $this->request->getVar('start_date'),
+                        'end_date' => $this->request->getVar('end_date'),
+                        'no_of_users' => $users,
+                        'minimum_order_amount' => $this->request->getVar('minimum_order_amount'),
+                        'max_discount_amount' => $this->request->getVar('max_discount_amount'),
+                        'discount' => $this->request->getVar('discount'),
+                        'discount_type' => $this->request->getVar('discount_type'),
+                        'repeat_usage' => $repeat_usage,
+                        'no_of_repeat_usage' => $this->request->getVar('no_of_repeat_usage'),
+                        'image' => $image,
+                        'status' => $status,
+                    );
+
+                    $promocode_model->save($promocode);
+                    $response = [
+                        'error' => false,
+                        'message' => 'Promocode saved successfully',
+                        'data' => []
+                    ];
+                    $response['csrfName'] = csrf_token();
+                    $response['csrfHash'] = csrf_hash();
+                    return $this->response->setJSON($response);
+                }
+            } else {
+                return redirect()->back();
+            }
+        }
+    }
+
+    public function list()
+    {
+        $is_already_subscribe = fetch_details('partner_subscriptions', ['partner_id' => $this->userId, 'status' => 'active']);
+        if (empty($is_already_subscribe)) {
+            return redirect('partner/subscription');
+        }
+
+        $promocode_model = new Promo_code_model();
+
+        $limit = (isset($_GET['limit']) && !empty($_GET['limit'])) ? $_GET['limit'] : 10;
+        $offset = (isset($_GET['offset']) && !empty($_GET['offset'])) ? $_GET['offset'] : 0;
+        $sort = (isset($_GET['sort']) && !empty($_GET['sort'])) ? $_GET['sort'] : 'id';
+        $order = (isset($_GET['order']) && !empty($_GET['order'])) ? $_GET['order'] : 'ASC';
+        $search = (isset($_GET['search']) && !empty($_GET['search'])) ? $_GET['search'] : '';
+        $where['partner_id'] = $_SESSION['user_id'];
+        // print_R($where);
+        $promo_codes =  $promocode_model->list(false, $search, $limit, $offset, $sort, $order, $where);
+        return $promo_codes;
+    }
+
+    public function delete()
+    {
+
+        
+       
+            if (defined('ALLOW_MODIFICATION') && ALLOW_MODIFICATION == 0) {
+                $response['error'] = true;
+                $response['message'] = DEMO_MODE_ERROR;
+                $response['csrfName'] = csrf_token();
+                $response['csrfHash'] = csrf_hash();
+                return $this->response->setJSON($response);
+            }
+            // $is_already_subscribe = fetch_details('partner_subscriptions', ['partner_id' => $this->userId, 'status' => '1']);
+
+            // if (empty($is_already_subscribe)) {
+            //     return redirect('partner/subscription');
+            // }
+
+            $id = $this->request->getPost('id');
+            $db      = \Config\Database::connect();
+            $builder = $db->table('promo_codes')->delete(['id' => $id]);
+            if ($builder) {
+                $response = [
+                    'error' => false,
+                    'message' => 'Promocode deleted successfully',
+                    'csrfName' => csrf_token(),
+                    'csrfHash' => csrf_hash(),
+                    'data' => []
+                ];
+            } else {
+                $response = [
+                    'error' => true,
+                    'message' => 'Promocode can not be deleted!',
+                    'csrfName' => csrf_token(),
+                    'csrfHash' => csrf_hash(),
+                    'data' => []
+                ];
+            }
+            return $this->response->setJSON($response);
+         
+    }
+}

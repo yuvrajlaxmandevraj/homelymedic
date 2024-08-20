@@ -1,0 +1,26 @@
+[09-Mar-2024 04:34:44 America/Boise] PHP Warning:  Undefined array key "HTTP_HOST" in /home4/homelyme/public_html/app/Config/Constants.php on line 89
+[09-Mar-2024 04:34:44 America/Boise] PHP Fatal error:  Uncaught Error: Undefined constant "CodeIgniter\CLI\ENVIRONMENT" in /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/CLI.php:694
+Stack trace:
+#0 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/CLI.php(735): CodeIgniter\CLI\CLI::streamSupports('stream_isatty', Resource id #2)
+#1 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/CLI.php(173): CodeIgniter\CLI\CLI::hasColorSupport(Resource id #2)
+#2 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/CLI.php(1153): CodeIgniter\CLI\CLI::init()
+#3 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(311): include_once('/home4/homelyme...')
+#4 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/home4/homelyme...')
+#5 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('CodeIgniter\\CLI...')
+#6 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/Console.php(60): CodeIgniter\Autoloader\Autoloader->loadClass('CodeIgniter\\CLI...')
+#7 /home4/homelyme/public_html/spark(60): CodeIgniter\CLI\Console->showHeader(false)
+#8 {main}
+  thrown in /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/CLI.php on line 694
+[09-Mar-2024 04:35:31 America/Boise] PHP Warning:  Undefined array key "HTTP_HOST" in /home4/homelyme/public_html/app/Config/Constants.php on line 89
+[09-Mar-2024 04:35:31 America/Boise] PHP Fatal error:  Uncaught Error: Undefined constant "CodeIgniter\CLI\ENVIRONMENT" in /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/CLI.php:694
+Stack trace:
+#0 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/CLI.php(735): CodeIgniter\CLI\CLI::streamSupports('stream_isatty', Resource id #2)
+#1 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/CLI.php(173): CodeIgniter\CLI\CLI::hasColorSupport(Resource id #2)
+#2 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/CLI.php(1153): CodeIgniter\CLI\CLI::init()
+#3 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(311): include_once('/home4/homelyme...')
+#4 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/home4/homelyme...')
+#5 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('CodeIgniter\\CLI...')
+#6 /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/Console.php(60): CodeIgniter\Autoloader\Autoloader->loadClass('CodeIgniter\\CLI...')
+#7 /home4/homelyme/public_html/spark(60): CodeIgniter\CLI\Console->showHeader(false)
+#8 {main}
+  thrown in /home4/homelyme/public_html/vendor/codeigniter4/framework/system/CLI/CLI.php on line 694

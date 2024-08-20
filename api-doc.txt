@@ -1,0 +1,209 @@
+/*
+	HomelyMedic Developers
+*/
+
+API URL -->> 
+	http://homelymedic.com/partner/api/v1/{METHOD_NAME}  - (all APIs in one file only)
+
+---------------------------------------------------------------------------
+Defined API Methods:-
+---------------------------------------------------------------------------
+For providers
+
+
+1.login
+2.Register 
+3.get_orders  
+4.verify_user 
+5.get_settings  
+6.get_categories 
+7.get_sub_categories 
+8.update_fcm 
+9.get_taxes 
+10.get_services 
+11.delete_orders  
+12.get_promocodes 
+13.manage_promocodes 
+14.delete_promocode 
+15.send_withdrawal_request
+16.get_withdrawal_request 
+17.delete_withdrawal_request 
+18.delete_service
+19.manage_service
+20.get_transactions
+21.update_service_status
+22. update_order_status
+   
+------------------------------------------
+What parameters to be Passed?  See here >>
+------------------------------------------
+
+Use POST method to pass the parameters
+
+1.login   
+        mobile : 1234567890
+        password: 12345678
+
+2. Register
+        
+        username:test_partner   {required}
+        email:partner@gmail.com {required}
+        mobile:8887775555       {required}
+        password: 12345678      {required}
+        password_confirm: 12345678 {required}
+        city_id : 1 {required}
+        latitude : 23.2420  {required}
+        longitude : 69.669996 {required}
+        company_name :  test {required}
+        tax_name : gst {required}
+        tax_number : gdsyfsdf {required}
+        advance_booking_days : 1 {required}
+        type : 0 OR 1 {required}
+        number_of_members : 2 {required}
+        visiting_charges : 50 {required}
+
+        referral_code:MY_CODE     {optional}
+        fcm_id:YOUR_FCM_ID        {optional}
+        friends_code:45dsrwr      {optional}
+       
+       
+
+3. get_orders
+ 
+            partner_id:44         optional
+            limit:10            { default - 25 } optional
+            offset:0            { default - 0 } optional
+            sort:               id / name
+                                 { default -row_id } optional
+            order:DESC/ASC       { default - ASC } optional
+            search:value         { optional }
+            status:awaiting     { optional }
+    
+
+4. verify_user
+        phone: 9874565478
+                or
+        email: test@gmail.com 
+
+
+5. get_settings
+         variable:{variable Name}
+
+6. get_categories
+        id: 145   // {optional} 
+        limit:25            // { default - 25 } optional
+        offset:0            // { default - 0 } optional
+        sort:               id / name
+                            // { default -id } optional
+        order:DESC/ASC      // { default - DESC } optional
+
+7. get_sub_categories
+        category_id : 145 {required}
+
+        limit:25            // { default - 25 } optional
+        offset:0            // { default - 0 } optional
+        sort:               id / name
+                            // { default -id } optional
+        order:DESC/ASC      // { default - DESC } optional 
+    
+8. update_fcm
+    fcm_id : value
+    
+9. get_taxes
+        id : 6 {optiona;}
+        sort:               // { c.name / c.id } optional
+        order:DESC/ASC      // { default - ASC } optional
+        search:value        // {optional}
+        limit:10            // {pass default limit for city list}{default : 25}
+        offset:0            // {optional default :0}
+
+10. get_services
+        partner_id : 50 {optional}
+        category_id : 125 {optional}
+        latitude   : 23.242001 {optional}
+        longitude  : 69.666931   
+        sort:                 {optional}
+        order:DESC/ASC       {optional}
+        search:value         {optional}
+        limit:10             {pass default limit for city list}{default : 25}
+        offset:0             {optional default :0}
+
+      
+
+11. delete_orders
+      order_id : 17 {required}
+
+12. get_promocodes
+       partner_id : 50 {optional}
+       limit:25            // { default - 25 } optional
+       offset:0            // { default - 0 } optional
+       sort:               id / name
+                            // { default -id } optional
+        order:DESC/ASC      // { default - DESC } optional 
+
+13. manage_promocode
+        promo_code : WELCOME  {required}
+        start_date:  2022/05/12 {required}
+        end_date:    2022/05/12 {required}
+        minimum_order_amount:200     { required}
+        discount:10      {required}  
+        discount_type: percentage /amount    {required}  
+        max_discount_amount: 100    {required}      
+        repeat_usage  : 1/ 0  { optional }   
+        no_of_repeat_usage  : 0  { optional }   
+        message  : any message  { required }   
+        status  : 1 {required}
+
+14. delete_promocode
+     promo_id : 1 {required}
+
+15. send_withdrawal_request
+       user_id : 50 {required}
+       payment_address : BOB,ACC no {required}
+       amount : 500 {required}
+       user_type : partner / customer {required}
+       
+        id: 1 {optional} (for update)
+        remarks: any {optional} 
+        status: 0 (default) {optional} 
+
+16. get_withdrawal_request
+       user_id : 50 {optional}
+        limit:25            // { default - 25 } optional
+        offset:0            // { default - 0 } optional
+        sort:               id / name
+                            // { default -id } optional
+        order:DESC/ASC      // { default - DESC } optional 
+        
+17. delete_withdrawal_request
+       id : 50 {required}
+
+18. delete_service
+      service_id : 17 {required}
+
+19. manage_service
+        title:api_test_1                {required}
+        description:api_test_1          {required}
+        price:110                       {required}
+        duration:60                     {required}
+        max_qty:1                       {required}
+        tags[]:["0","1","b"]            {required}
+        members:1                       {required}
+        categories:145                  {required}
+        cancelable_till: 00 (minutes)   {required}
+
+20. get_transactions
+        limit:10            {optional}
+        search:stripe       {optional}
+        offset:0            {optional}
+        sort:id             {optional}
+        order:asc           {optional}
+
+21. update_service_status
+        service_id:12      {required}
+        status:0           {optional}
+
+22. update_order_status
+        order_id:       01              {required}
+        customer_id:    01              {required}
+        status:         'completed'     {required}

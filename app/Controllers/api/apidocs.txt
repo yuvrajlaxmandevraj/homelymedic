@@ -1,0 +1,317 @@
+/*
+	WRTeam Developers
+*/
+
+API URL -->> 
+	http://edemand.espeech.in/api/v1/{METHOD_NAME}  - (all APIs in one file only)
+
+---------------------------------------------------------------------------
+Defined API Methods:-
+---------------------------------------------------------------------------
+
+<<<<<<< HEAD
+
+=======
+1.  manage_user
+2.  update_user
+3.  update_fcm
+4.  get_settings
+5.  get_sections
+6.  add_transaction
+7.  get_transaction
+8.  add_address
+9.  delete_address
+10. get_address
+11. validate_promo_code
+12. get_promo_codes
+13. get_categories
+14. get_sub_categories
+15. get_sliders
+16. get_providers
+17. get_services
+18. get_cities 
+19. is_city_deliverable
+20. manage_cart
+21. remove_from_cart
+22. get_cart
+23. place_order
+24. get_orders
+25. manage_notification
+26. get_notifications
+27. get_ticket_types
+28. add_ticket
+29. edit_ticket
+30. get_tickets
+31. send_message
+32. get_messages
+33. book_mark
+34. update_order_status
+35. get_booked_slot
+36. flutterwave
+37. paystack
+38. get_available_slots
+39. get_ratings
+40. add_rating
+41. update_rating
+
+------------------------------------------
+What parameters to be Passed?  See here >>
+------------------------------------------
+
+Use POST method to pass the parameters
+
+1.manage_user   
+        mobile:     9876543210  {required}
+        lattitude:              {optional}
+        longitude:              {optional}
+
+2. update_user
+        username:       {optional}
+        email:          {optional}
+        mobile:         {optional}
+        country_code:   {optional}
+        image:          {optional}
+        referral_code:  {optional}
+        fcm_id:         {optional}
+        friends_code:   {optional}
+        latitude:       {optional}
+        city_id:        {optional}
+        longitude:      {optional}
+
+3. update_fcm
+        user_id:12
+        fcm_id: FCM_ID  {required}
+
+
+4. get_settings
+        variable: {required}
+
+5. get_sections
+        {no parameter required}
+
+6.  add_transaction
+        transaction_type: {required}
+        order_id:         {required}
+        type:             {required}
+        txn_id:           {required}
+        amount:           {required}
+        status:           {required}
+        message:          {optional}
+        payment_method:   {required}
+         
+7.  get_transaction
+        limit:    {optional}
+        offset:   {optional}
+        sort:     {optional}
+        order:    {optional}
+
+8.  add_address
+        address_id:           {optional, Pass when you want to update}
+        mobile:               {required}
+        address:              {required}
+        city_id:              {required}
+        lattitude:            {required}
+        longitude:            {required}
+        area:                 {required}
+        type:                 {optional}
+        country_code:         {optional}
+        alternate_mobile:     {optional}
+        landmark:             {optional}
+        pincode:              {optional}   
+        state:                {optional} 
+        country:              {optional}
+        is_default:           {optional}
+
+9.  delete_address
+        address_id: {required}
+
+10. get_address
+        //address_id:   {optional}
+        //limit:        {optional}
+        //offset:       {optional}
+        //sort:         {optional}
+        //order:        {optional}
+        //search:       {optional}
+
+11. validate_promo_code
+        promo_code:   {required}
+        final_total:  {required}
+
+12. get_promo_codes
+        //limit:    {optional}
+        //offset:   {optional}
+        //sort:     {optional}
+        //order:    {optional}
+        //search:   {optional}
+
+13. get_categories
+        id:15               // optional
+        limit:25            // { default - 10 } optional
+        offset:0            // { default - 0 } optional
+        sort:               id / name
+                            // { default -id } optional
+        order:DESC/ASC      // { default - DESC } optional
+
+14. get_sub_categories
+        category_id:          {required}
+        id:                   {optional}
+        limit:                {optional}
+        offset:               {optional}
+        sort:                 {optional}
+        order:                {optional}    
+        search:               {optional}
+
+15. get_sliders
+        type_id:    {optional}
+        id:         {optional}
+        type:       {optional}
+        limit:      {optional}
+        offset:     {optional}
+        sort:       {optional}
+        order:      {optional}
+        search:     {optional}
+
+16. get_providers
+        partner_id:           {optional}
+        category_id:          {optional}
+        sub_category_id:      {optional}
+        service_id:           {optional}
+        limit:                {optional}
+        offset:               {optional}
+        sort:                 {optional}       
+        order:                {optional}
+        search:               {optional}        
+
+17. get_services
+        limit:                {optional}
+        offset:               {optional}
+        sort:                 {optional}       
+        order:                {optional}
+        search:               {optional}        
+
+18. get_cities
+        id:         {optional}
+        name:       {optional}
+        limit:      {optional}
+        offset:     {optional}
+        sort:       {optional}
+        order:      {optional}
+        search:     {optional}
+
+19. is_city_deliverable
+    Either one of the parameters are required at a time
+            id:     {required}
+            name:   {required}
+
+20. manage_cart
+        service_id:         {required}
+        qty:                {required}
+        is_saved_for_later  {optional}
+
+21. remove_from_cart
+        cart_id:    {required}
+        service_id: {optional , when want to remove all the related service to id}
+
+22. get_cart
+        limit:      {optional}
+        offset:     {optional}
+        sort:       {optional}
+        order:      {optional}
+        search:     {optional}
+
+23. place_order
+        service_id:             {required}
+        quantity:               {required}
+        total:                  {required}
+        visiting_charges:       {required}
+        final_total:            {required}
+        promo_code:             {optional}
+        payment_method:         {required}
+        address_id:             {required}
+        status:                 {required}
+        order_note:             {optional}
+        date_of_service:        {required}
+        starting_time:          {required}
+        ending_time:          {required}
+
+24. get_orders
+        limit:      {optional}
+        offset:     {optional}
+        sort:       {optional}
+        order:      {optional}
+        search:     {optional}
+
+25. manage_notification
+        notification_id:      {required}
+        is_readed:            {optional}
+        delete_notification:  {optional}
+
+26. get_notifications
+        id:         {optional}
+        limit:      {optional}
+        offset:     {optional}
+        sort:       {optional}
+        order:      {optional}
+        search:     {optional}
+
+27. get_ticket_types
+
+28. add_ticket
+        ticket_type_id:     {required}
+        subject:            {required}
+        email:              {required}
+        description:        {required}
+
+29. edit_ticket
+        ticket_id:          {required}
+        ticket_type_id:     {required}
+        subject:            {required}
+        email:              {required}
+        description:        {required}
+        status:             {optional}
+
+30. get_tickets
+        id:                 {optional}
+        limit:              {optional}
+        offset:             {optional}
+        sort:               {optional}
+        order:              {optional}
+        search:             {optional}
+
+31. send_message
+        when sending Either message or attachments is required or both can be passed but one is must
+
+        ticket_id:          {required}
+        message:            {optional}
+        attachments:        {optional}
+
+32. get_messages
+        ticket_id:          {required}
+        //need to work may be
+
+33. book_mark
+        if the type is either  add or remove then partner_id becomes required in case of list it is not required
+            type:           {required}
+            partner_id:     {required}
+
+34. update_order_status
+            order_id:   {required}
+            status:     {required}
+
+39. get_ratings
+        partner_id:         {optional}
+        limit:              {optional}
+        offset:             {optional}
+        sort:               {optional}
+        order:              {optional}
+        search:             {optional}
+40. add_rating
+        service_id:         {required}
+        rating:             {required}
+        comment:            {optional}
+        image:              {optional}
+41. update_rating
+        rating_id:          {required}
+        rating:             {required}
+        comment:            {optional}
+        image:              {optional}

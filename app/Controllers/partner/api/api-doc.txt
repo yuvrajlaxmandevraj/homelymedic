@@ -1,0 +1,218 @@
+/*
+	WRTeam Developers
+*/
+
+API URL -->> 
+	http://edemand.espeech.in/partner/api/v1/{METHOD_NAME}  - (all APIs in one file only)
+
+---------------------------------------------------------------------------
+Defined API Methods:-
+---------------------------------------------------------------------------
+
+1.login
+2.Register 
+3.get_orders  
+4.get_categories 
+5.get_sub_categories 
+6.get_services 
+7.delete_orders  
+8.verify_user 
+9.get_settings  
+10.update_fcm 
+11.get_taxes 
+12.send_withdrawal_request 
+13.get_withdrawal_request 
+14.delete_withdrawal_request 
+15.get_partner 
+16.manage_promocode
+17.delete_promocode 
+18.get_promocodes 
+19.manage_service
+20.get_statistics
+21.get_taxes
+22.delete_service
+23.get_service_ratings
+
+------------------------------------------
+What parameters to be Passed?  See here >>
+------------------------------------------
+
+Use POST method to pass the parameters
+
+1.login   
+        mobile : 1234567890
+        password: 12345678
+
+2. Register
+        
+        username:test_partner   {required}
+        email:partner@gmail.com {required}
+        mobile:8887775555       {required}
+        password: 12345678      {required}
+        password_confirm: 12345678 {required}
+        city_id : 1 {required}
+        latitude : 23.2420  {required}
+        longitude : 69.669996 {required}
+        company_name :  test {required}
+        tax_name : gst {required}
+        tax_number : gdsyfsdf {required}
+        advance_booking_days : 1 {required}
+        type : 0 OR 1 {required}
+        number_of_members : 2 {required}
+        visiting_charges : 50 {required}
+
+        referral_code:MY_CODE     {optional}
+        fcm_id:YOUR_FCM_ID        {optional}
+        friends_code:45dsrwr      {optional}
+       
+       
+
+3. get_orders
+ 
+            partner_id:44         optional
+            limit:10            { default - 25 } optional
+            offset:0            { default - 0 } optional
+            sort:               id / name
+                                 { default -row_id } optional
+            order:DESC/ASC       { default - ASC } optional
+            search:value         { optional }
+            status:awaiting     { optional }
+
+4. get_categories
+        id: 145   // {optional} 
+        limit:25            // { default - 25 } optional
+        offset:0            // { default - 0 } optional
+        sort:               id / name
+                            // { default -id } optional
+        order:DESC/ASC      // { default - DESC } optional
+
+5. get_sub_categories
+        category_id : 145 {required}
+
+        limit:25            // { default - 25 } optional
+        offset:0            // { default - 0 } optional
+        sort:               id / name
+                            // { default -id } optional
+        order:DESC/ASC      // { default - DESC } optional 
+
+6. get_services
+        partner_id : 50 {optional}
+        category_id : 125 {optional}
+        latitude   : 23.242001 {optional}
+        longitude  : 69.666931   
+        sort:                 {optional}
+        order:DESC/ASC       {optional}
+        search:value         {optional}
+        limit:10             {pass default limit for city list}{default : 25}
+        offset:0             {optional default :0}
+
+7. delete_orders
+      order_id : 17 {required}
+
+    
+
+8. verify_user
+        mobile: 9874565478
+                or
+        email: test@gmail.com 
+    
+9. get_settings
+         variable:{variable Name}
+
+10. update_fcm
+    fcm_id : value
+
+11. get_taxes
+        id : 6 {optiona;}
+        sort:               // { c.name / c.id } optional
+        order:DESC/ASC      // { default - ASC } optional
+        search:value        // {optional}
+        limit:10            // {pass default limit for city list}{default : 25}
+        offset:0            // {optional default :0}
+
+12. send_withdrawal_request
+       user_id : 50 {required}
+       payment_address : BOB,ACC no {required}
+       amount : 500 {required}
+       user_type : partner / customer {required}
+       
+        id: 1 {optional} (for update)
+        remarks: any {optional} 
+        status: 0 (default) {optional} 
+
+13. get_withdrawal_request
+       user_id : 50 {optional}
+        limit:25            // { default - 25 } optional
+        offset:0            // { default - 0 } optional
+        sort:               id / name
+                            // { default -id } optional
+        order:DESC/ASC      // { default - DESC } optional 
+
+14. delete_withdrawal_request
+       id : 50 {required}
+
+
+15. get_partner
+        
+            partner_id:163           optional
+            limit:10            { default - 25 } optional
+            offset:0            { default - 0 } optional
+            sort:               id / name
+                                { default -row_id } optional
+            order:DESC/ASC      { default - ASC } optional
+            search:value        { optional }
+            status:awaiting     { optional }
+    
+16. manage_promocode
+        promo_code : WELCOME  {required}
+        start_date:  2022/05/12 {required}
+        end_date:    2022/05/12 {required}
+        minimum_order_amount:200     { required}
+        discount:10      {required}  
+        discount_type: percentage /amount    {required}  
+        max_discount_amount: 100    {required}      
+        repeat_usage  : 1/ 0  { optional }   
+        no_of_repeat_usage  : 0  { optional }   
+        message  : any message  { required }   
+        status  : 1 {required}
+
+17. delete_promocode
+     promo_id : 1 {required}  
+
+18. get_promocodes
+       partner_id : 50 {optional}
+       limit:25            // { default - 25 } optional
+       offset:0            // { default - 0 } optional
+       sort:               id / name
+                            // { default -id } optional
+        order:DESC/ASC      // { default - DESC } optional 
+
+19.manage_service
+        title:test1                     //{required}
+        tags:test                       //{required}
+        description:15                  //{required}
+        price:100                       //{required}
+        duration:15                     //{required}
+        max_qty:8                       //{required}
+        members:2                       //{required}
+        categories:Home Furniture       //{required}
+        cancelable_till:Awaiting        // optional
+        is_pay_later_allowed:0          // optional
+        is_cancelable:0                 //{required}
+        discounted_price:99             // optional
+        tax_type:test                   // optional
+        image:                          // optional
+
+20.get_statistics
+        partner_id : 50                 //{required}
+        
+21.get_taxes
+        id : 11        //{optional}
+
+22.delete_service
+        service_id     //{required}
+
+23.get_service_ratings
+        partner_id      //{optional}
+        service_id      //{optional}
+

@@ -1,0 +1,290 @@
+CRITICAL - 2024-03-12 02:38:21 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-12 02:38:23 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-12 02:38:23 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-12 02:38:24 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-12 02:40:49 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-12 02:41:22 --> Error: Class "Kint\Renderer\Renderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-03-12 02:45:16 --> TypeError: CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 286.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 02:47:06 --> TypeError: CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 286.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 02:49:53 --> TypeError: CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 286.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 02:49:54 --> TypeError: CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 286.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-12 02:50:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'homelyme_divecho'@'localhost' (using password: YES) in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'homelyme_divech...', 'DivEcho@2023', 'homelyme_divech...', 3306, '', 0)
+#1 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\homelymedic\app\Controllers\Frontend.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\homelymedic\app\Controllers\Frontend.php(17): App\Controllers\get_settings('general_setting...', true)
+#6 C:\xampp\htdocs\homelymedic\app\Controllers\Home.php(12): App\Controllers\Frontend->__construct()
+#7 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(913): App\Controllers\Home->__construct()
+#8 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+#9 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\homelymedic\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\homelymedic\app\Controllers\Frontend.php(25): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\homelymedic\app\Controllers\Frontend.php(17): App\Controllers\get_settings('general_setting...', true)
+#5 C:\xampp\htdocs\homelymedic\app\Controllers\Home.php(12): App\Controllers\Frontend->__construct()
+#6 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(913): App\Controllers\Home->__construct()
+#7 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\homelymedic\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-03-12 02:50:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `variable` = :variable:', [...], false)
+ 3 APPPATH\Controllers\Frontend.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Frontend.php(17): App\Controllers\get_settings('general_settings', true)
+ 5 APPPATH\Controllers\Home.php(12): App\Controllers\Frontend->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Home->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 02:52:46 --> ErrorException: Cannot redeclare response() (previously declared in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Common.php:943)
+in APPPATH\Helpers\function_helper.php on line 2096.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-12 02:55:52 --> ErrorException: Cannot redeclare response() (previously declared in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Common.php:943)
+in APPPATH\Helpers\function_helper.php on line 2096.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-12 02:55:55 --> ErrorException: Cannot redeclare response() (previously declared in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Common.php:943)
+in APPPATH\Helpers\function_helper.php on line 2096.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-12 02:55:55 --> ErrorException: Cannot redeclare response() (previously declared in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Common.php:943)
+in APPPATH\Helpers\function_helper.php on line 2096.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-12 02:55:55 --> ErrorException: Cannot redeclare response() (previously declared in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Common.php:943)
+in APPPATH\Helpers\function_helper.php on line 2096.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-12 02:55:56 --> ErrorException: Cannot redeclare response() (previously declared in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Common.php:943)
+in APPPATH\Helpers\function_helper.php on line 2096.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-12 02:55:56 --> ErrorException: Cannot redeclare response() (previously declared in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Common.php:943)
+in APPPATH\Helpers\function_helper.php on line 2096.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-12 02:55:56 --> ErrorException: Cannot redeclare response() (previously declared in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Common.php:943)
+in APPPATH\Helpers\function_helper.php on line 2096.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-12 02:57:38 --> Error: Call to undefined function Config\get_settings()
+in APPPATH\Config\Events.php on line 94.
+ 1 APPPATH\Config\Events.php(71): Config\set_system_timezone()
+ 2 SYSTEMPATH\Events\Events.php(154): CodeIgniter\Events\Events::Config\{closure}()
+ 3 APPPATH\Controllers\BaseController.php(77): CodeIgniter\Events\Events::trigger('post_controller_constructor')
+ 4 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 5 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 02:58:50 --> ErrorException: Cannot redeclare response() (previously declared in C:\xampp\htdocs\homelymedic\vendor\codeigniter4\framework\system\Common.php:943)
+in APPPATH\Helpers\function_helper.php on line 2096.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-12 08:29:09 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'C:\\xampp\\htdocs\\homelymedic\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Controllers\BaseController.php(81): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 08:29:49 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'C:\\xampp\\htdocs\\homelymedic\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Controllers\BaseController.php(81): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 08:29:50 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'C:\\xampp\\htdocs\\homelymedic\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Controllers\BaseController.php(81): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 08:29:50 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'C:\\xampp\\htdocs\\homelymedic\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Controllers\BaseController.php(81): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 08:29:50 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'C:\\xampp\\htdocs\\homelymedic\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Controllers\BaseController.php(81): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 08:29:51 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'C:\\xampp\\htdocs\\homelymedic\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Controllers\BaseController.php(81): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 08:29:51 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'C:\\xampp\\htdocs\\homelymedic\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Controllers\BaseController.php(81): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 08:29:52 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'C:\\xampp\\htdocs\\homelymedic\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Controllers\BaseController.php(81): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 08:29:52 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'C:\\xampp\\htdocs\\homelymedic\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Controllers\BaseController.php(81): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-12 20:00:28 --> ErrorException: Attempt to read property "driver" on null
+in SYSTEMPATH\Config\Services.php on line 671.
+ 1 SYSTEMPATH\Config\Services.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "driver" on null', 'C:\\xampp\\htdocs\\homelymedic\\vendor\\codeigniter4\\framework\\system\\Config\\Services.php', 671)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(null, false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 4 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 6 APPPATH\Controllers\BaseController.php(81): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 7 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
